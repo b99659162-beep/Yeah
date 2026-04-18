@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Mystery Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }body {
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffd6ec, #ffe9f5, #fff5fa);
+}
+
+.page {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1 {
+  color: #ff1493;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  max-width: 700px;
+  line-height: 1.5;
+  z-index: 2;
+}
+
+p {
+  color: #c2185b;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  z-index: 2;
+}
+
+button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  z-index: 2;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #ff1493;
+}
+
+input {
+  padding: 14px;
+  width: 250px;
+  border-radius: 20px;
+  border: 2px solid #ff69b4;
+  outline: none;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.decor {
+  position: absolute;
+  font-size: 2.2rem;
+  animation: float 5s infinite ease-in-out;
+  opacity: 0.9;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.theme1 { background: linear-gradient(135deg, #ffd6ec, #fff0f8); }
+.theme2 { background: linear-gradient(135deg, #ffe4f3, #ffd1e8); }
+.theme3 { background: linear-gradient(135deg, #fff0f8, #ffe7f7); }
+.theme4 { background: linear-gradient(135deg, #ffd9f0, #ffeef8); }
+.theme5 { background: linear-gradient(135deg, #ffe0f0, #fff5fa); }
+.theme6 { background: linear-gradient(135deg, #ffd1e8, #ffe9f5); }
+
+  </style>
+</head>
+<body>  <div class="page active theme1" id="page1">
+    <div class="decor" style="top:10%;left:10%;">🦋</div>
+    <div class="decor" style="top:15%;right:12%;">🌸</div>
+    <div class="decor" style="bottom:15%;left:15%;">🌹</div>
+    <div class="decor" style="bottom:10%;right:12%;">🎀</div>
+    <h1>Hey you 🌸</h1><p>I found something that reminded me of you today...</p>
+    <button onclick="nextPage(2)">Open It 👀</button>
+  </div>  <div class="page theme2" id="page2">
+    <div class="decor" style="top:8%;left:8%;">🌷</div>
+    <div class="decor" style="top:18%;right:10%;">🦋</div>
+    <div class="decor" style="bottom:12%;left:10%;">💐</div>
+    <div class="decor" style="bottom:15%;right:12%;">👑</div>
+    <h1>Do you still remember me? 🤭</h1><p>Maybe yes. Maybe no. But I still think you have the cutest smile.</p>
+    <button onclick="nextPage(3)">Maybe I Remember You Too 💌</button>
+  </div>  <div class="page theme3" id="page3">
+    <div class="decor" style="top:10%;left:10%;">🙈</div>
+    <div class="decor" style="top:12%;right:10%;">🌸</div>
+    <div class="decor" style="bottom:12%;left:10%;">🦋</div>
+    <div class="decor" style="bottom:12%;right:10%;">🎀</div>
+    <h1>I am a little shy 🙈</h1><p>If we accidentally met again someday, where would that be?</p>
+    <input type="text" placeholder="Write your place here...">
+    <button onclick="nextPage(4)">Continue ✨</button>
+  </div>  <div class="page theme4" id="page4">
+    <div class="decor" style="top:8%;left:8%;">💖</div>
+    <div class="decor" style="top:15%;right:8%;">🌹</div>
+    <div class="decor" style="bottom:10%;left:10%;">🦋</div>
+    <div class="decor" style="bottom:12%;right:10%;">🌸</div>
+    <h1>One question 🤭</h1><p>How is it even possible to look this pretty without trying?</p>
+    <button onclick="nextPage(5)">I Need More Proof 😂</button>
+  </div>  <div class="page theme5" id="page5">
+    <div class="decor" style="top:10%;left:10%;">🌺</div>
+    <div class="decor" style="top:12%;right:10%;">🦋</div>
+    <div class="decor" style="bottom:10%;left:12%;">🎀</div>
+    <div class="decor" style="bottom:15%;right:10%;">🌹</div>
+    <h1>Seriously though 😭💖</h1><p>You have the kind of face people remember for a long time.</p>
+    <button onclick="nextPage(6)">One Last Thing 🌸</button>
+  </div>  <div class="page theme6" id="page6">
+    <div class="decor" style="top:8%;left:10%;">💞</div>
+    <div class="decor" style="top:15%;right:12%;">🦋</div>
+    <div class="decor" style="bottom:12%;left:12%;">🌸</div>
+    <div class="decor" style="bottom:10%;right:12%;">🌹</div>
+    <h1>Maybe we will meet again someday 😚🫠</h1><p>And if we do, I hope you smile when you see me.</p>
+  </div>  <script>
+    function nextPage(pageNumber) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById('page' + pageNumber).classList.add('active');
+    }
+  </script></body>
+</html>
